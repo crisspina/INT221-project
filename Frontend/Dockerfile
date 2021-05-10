@@ -1,14 +1,12 @@
-FROM node:14.16-alpine3.10 as build
+FROM node:lts-alpine as build-stage
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY package.json /app/package.json
-RUN npm install 
-COPY . /app
+COPY package*.json ./
+RUN npm install
+COPY ./ .
 RUN npm run build
-
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d
-EXPOSE 8080 
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8080
+FROM nginx 
+RUN mkdir /app
+COPY --from=build-stage /app/dist /app
+COPY nginx.conf /etc/nginx/nginx.conf
+CMD ["nginx", "-g", "daemon off;"]s
