@@ -1,4 +1,5 @@
 CREATE USER 'admin'@'%' IDENTIFIED BY 'password' ;
+
 GRANT ALL ON *.* TO 'admin'@'%' ;
 
 CREATE TABLE brands (
@@ -21,16 +22,16 @@ CREATE TABLE productdetails (
     colorid    INTEGER NOT NULL
 );
 
-ALTER TABLE productdetails ADD CONSTRAINT productdetails_pk PRIMARY KEY ( productid,
-                                                                          colorid );
+ALTER TABLE productdetails ADD CONSTRAINT productdetails_pk PRIMARY KEY ( productid,colorid );
+
 CREATE TABLE products (
     productid    INTEGER NOT NULL,
     modelname    VARCHAR(40) NOT NULL,
     casename     VARCHAR(50) NOT NULL,
     description  VARCHAR(120) NOT NULL,
-    price        FLOAT(6) NOT NULL,
+    price        DOUBLE NOT NULL,
     amount       INTEGER NOT NULL,
-    date       DATE NOT NULL,
+    date       DATETIME NOT NULL,
     image        VARCHAR(100) NOT NULL,
     brandid      INTEGER NOT NULL
 );
