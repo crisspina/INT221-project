@@ -390,10 +390,10 @@ export default {
       isColorInvalid: false,
       isBrandInvalid: false,
       errors: null,
-      url: 'http://20.184.12.210/casecoolors/stock',
-      img: 'http://20.184.12.210/casecoolors/getImages/',
-      urlColor: 'http://20.184.12.210/casecoolors/colors',
-      urlBrand: 'http://20.184.12.210/casecoolors/brand',
+      url: 'http://52.148.70.112/casecoolors/stock',
+      img: 'http://52.148.70.112/casecoolors/getImages/',
+      urlColor: 'http://52.148.70.112/casecoolors/colors',
+      urlBrand: 'http://52.148.70.112/casecoolors/brand',
       
     }
   },
@@ -628,7 +628,7 @@ export default {
         console.log(this.imageName)
         console.log(formData)
 
-        const res = await fetch('http://20.184.12.210/casecoolors/stock/add',{
+        const res = await fetch('http://52.148.70.112/casecoolors/stock/add',{
           method:'POST',
           body: formData
         })
@@ -687,7 +687,7 @@ export default {
       }
     },
     async deleteimg(image){
-      const resimg = await fetch(`http://20.184.12.210/casecoolors/delImages/${image}`,{
+      const resimg = await fetch(`http://52.148.70.112/casecoolors/delImages/${image}`,{
           method: 'DELETE'
       })
 
@@ -697,7 +697,7 @@ export default {
     },
     async deleteCase(id){
       try{
-        const res = await fetch(`http://20.184.12.210/casecoolors/stock/${id}`,{
+        const res = await fetch(`http://52.148.70.112/casecoolors/stock/${id}`,{
           method: 'DELETE'
         })
         
@@ -780,7 +780,7 @@ export default {
           console.log(this.imageName)
           console.log(formDataEdit)
 
-          const res = await fetch(`http://20.184.12.210/casecoolors/stock/edit/${this.editId}`,{
+          const res = await fetch(`http://52.148.70.112/casecoolors/stock/edit/${this.editId}`,{
             method:'PUT',
             body: formDataEdit
           })
@@ -801,7 +801,7 @@ export default {
           console.log(this.imageName)
           console.log(formDataWithPic)
 
-          const res = await fetch(`http://20.184.12.210/casecoolors/stock/add/${this.editId}`,{
+          const res = await fetch(`http://52.148.70.112/casecoolors/stock/add/${this.editId}`,{
             method:'PUT',
             body: formDataWithPic
           })
