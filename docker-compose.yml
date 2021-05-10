@@ -33,7 +33,7 @@ services:
           - MYSQL_DATABASE=casecoolors
           - MYSQL_USER=user
       volumes:
-          - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+          - ./init.sql:/data/application/init.sql
       networks:
           - server
   reverse-poxy:
