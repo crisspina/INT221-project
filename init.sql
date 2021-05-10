@@ -1,6 +1,6 @@
 CREATE USER 'admin'@'%' IDENTIFIED BY 'password' ;
 
-GRANT ALL ON . TO 'user'@'%';
+GRANT ALL ON *.* TO 'admin'@'%' ;
 
 CREATE TABLE brands (
     brandid    INTEGER NOT NULL,
