@@ -52,21 +52,13 @@ ALTER TABLE products
     ADD CONSTRAINT products_brands_fk FOREIGN KEY ( brandid )
         REFERENCES brands ( brandid );
 
-INSERT INTO brands ( brandid,brandname) VALUES ( 1,'casecoolors');
+INSERT INTO brands (brandid,brandname) VALUES ( 1,'casecoolors');
 
-INSERT INTO colors VALUES(1,'Deep Space Sparkle','#475D68');
-INSERT INTO colors VALUES(2,'Madder Lake','#C3343A');
-INSERT INTO colors VALUES(3,'Bittersweet','#FE6E65');
-INSERT INTO colors VALUES(4,'Davys Grey','#474747');
-INSERT INTO colors VALUES(5,'Rifle Green','#444C3F');
-INSERT INTO colors VALUES(6,'Alabaster','#F2EEE4');
-INSERT INTO colors VALUES(7,'Tea Green','#C4E2BE');
-
-INSERT INTO productdetails VALUES(1,1);
-INSERT INTO productdetails VALUES(2,2);
-INSERT INTO productdetails VALUES(3,3);
-INSERT INTO productdetails VALUES(4,4);
-INSERT INTO productdetails VALUES(5,5);
-INSERT INTO productdetails VALUES(6,6);
-INSERT INTO productdetails VALUES(7,7);
-
+INSERT INTO colors (colorid,colorname,colorcode) 
+VALUES(1,'Deep Space Sparkle','#475D68'),
+(2,'Madder Lake','#C3343A'),
+(3,'Bittersweet','#FE6E65'),
+(4,'Davys Grey','#474747'),
+(5,'Rifle Green','#444C3F'),
+(6,'Alabaster','#F2EEE4'),
+(7,'Tea Green','#C4E2BE');
