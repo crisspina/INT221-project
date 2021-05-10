@@ -1,4 +1,4 @@
-CREATE USER 'user'@'%' IDENTIFIED BY 'password' ;
+CREATE USER 'admin'@'%' IDENTIFIED BY 'password' ;
 
 GRANT ALL ON . TO 'user'@'%';
 
