@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+#shopBtn {
+    @apply bg-button;
+}
+
+.formName {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 mr-8;
+}
+
+.formPrice {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 mx-4;
+}
+
+.formAmount {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 mx-2;
+}
+
+.formText {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 mx-2;
+}
+
+.formModel {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 mr-1;
+}
+
+.formColor {
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1;
+}
+
+.formDate{
+    @apply mt-1 text-gray-700 border border-gray-300 rounded-md p-1 ml-4;
+}
